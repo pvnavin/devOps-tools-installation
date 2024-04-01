@@ -1,0 +1,120 @@
+instance type:t2micro, 
+apt update
+    2  apt install docker.io -y
+    3  docker --version
+    4 to check: docker images
+    5  to check container:docker ps
+    6   to check all containers:docker ps -a
+    7  to create docker image:docker run ubuntu
+    8  to create the container:docker run -tid --name test ubuntu /bin/bash
+    9   to check container:docker ps
+   10  to login the container:docker exec -ti 14171f7d50cb /bin/bash
+        to exit the container:control+pq
+   11   to stop: docker stop 14171f7d50cb   
+   12  docker ps
+   13  docker ps -a
+   14  docker rm -f 14171f7d50cb   
+   15  docker ps
+   16  docker ps -a
+   17  docker rmi -f ubuntu
+   18  docker images
+   19  docker ps -a
+   20  docker rm -f c40629dbfba9
+   21  docker ps -a
+   22  docker images
+   23  docker ps 
+   24  docker ps -a
+   25  docker network ls
+   26  apt install net-tools
+   27  docker network create demonw --subnet=172.19.0.0/16
+   28  docker network ls
+   29 
+   30  docker run -tid --name=demo --net demonw --ip 172.19.0.10 -h web.example ubuntu /bin/bash
+   31  docker inspect demonw demo
+   32  docker network disconnect demonw demo
+   33  docker inspect demonw 
+   34  docker network rm demonw
+   35  docker network ls
+   36  docker inspect demo 
+   37  
+   38  docker inspect bridge
+   39  docker network ls
+   40  docker network connect bridge demo
+   41  docker inspect demo
+   42  docker network ls
+   43  apt update
+   44  apt install apache2 
+   45  service apache2 start
+   46  mk dir /test
+   47  mkdir /test
+   48* 
+   49  
+   50  docker run -tid --name=test -v /test:/var/log ubuntu /bin/bash
+   51  ls /test
+   52  docker exec -ti test ls /var/log
+   53  docker exec -ti test touch /var/log/sample{1....10}
+   54  ls /var/log
+   56  docker exec -ti test /bin/bash
+   57  ls /test
+   58  docker ps
+   59  docker rm -f /437a42c97c2c   
+   60  docker rm -f /aeb08d06d899
+   61  docker rm -f /437a42c97c2c   
+   62  docker ps 
+   66  
+   67  
+   68  docker volume ls
+   69  docker volume create testvol
+   70  docker volume ls
+   71  ls /var/lib/docker/volumes
+   
+   73  ls /var/lib/docker/volumes/testvol/_data
+  
+   77  docker run -tid --name=demo -v testvol:/var/log ubuntu /bin/bash
+   78  
+   79  ls /var/lib/docker/volumes/testvol/_data
+   80  docker ps
+   81  docker rm -f ubuntu
+   82  docker rm -f demo
+   83  docker ps
+   84  docker volume rm testvol
+   85  docker volume ls
+   86  mkdir webserver
+   87  cd webserver
+   88  vi docker file
+   89  vi Dockerfile
+   90  docker images
+   91  ls
+   92  vi index.html
+   93  ls
+   94  vi index.html
+   95  ls
+   96  docker build -t basicweb
+   97  docker images
+   98  docker build -t basicweb
+   99  docker build -t webserver .
+  100  docker images
+  101  ls
+  102  vi Dockerfile 
+  103  docker build -t webserver .
+  104  ls
+  105  docker images
+  106  docker login
+  107  docker tag ubuntu
+  108  docker tag naveen/ubuntu
+  109  naveenkumar/basicweb
+  110  naveenkumar/ubuntu
+  111  naveenkumar0712/ubuntu
+  112  docker tag naveen/ubuntu
+  113  docker tag basicweb/ubuntu
+  114  docker tag ubuntu/basicweb
+  115  naveenkumar0712/ubuntu
+  116  docker images
+  117  docker tag webserver:latest naveenkumar0712/fuzail
+  118  docker tag webserver:latest naveenkumar0712/fuzail:noor
+  119  docker push naveenkumar0712/fuzail:noor
+  120  docker pull naveenkumar0712/fuzail:noor~
+  121  docker pull naveenkumar0712/fuzail:noor
+  122  docker rmi naveenkumar0712/fuzail:noor
+  123  docker images
+  124  history

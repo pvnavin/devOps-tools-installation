@@ -1,0 +1,34 @@
+My self Kishore. Currently I am working for ONDAS TECHNOLOGY PVT LTD  from past 3+ years
+right now Here i am working as devops engineer for CBA client. 
+
+
+GIT as a version control tool
+Maven as a build tool
+SonarQube as a Code Quality check tool
+Jenkins as continuous integration and continuous deployment tool
+Docker as containerization tool
+Aws as a cloud Tool
+Terraform as a infrastructure as a code tool
+Service now as a ticketing tool
+
+Roles and responsibilities:
+*********
+
+My day start with status call, in that we have to update what we have done y’day and what we are going to do today…
+Actually we have a sprints each sprints will have 15days. Now we are migrating from onpromiss to cloud so we are writing the terraform configuration files to provision the aws services.
+apart from that we are providing the support for developers for their deployment issue build issue. 
+I have recently promoted to L2 role and here i will mainly work on prioritaized incidents like P0,P1,P2 and resolve them with in our SLA's. Depends upon the impact we can asses the priority and create a incident.
+
+ when even a P2/P1/P0 raised we will immediately create war room and jump into teams bridge with respective team members
+
+Apart from that when even any developer comes with a query/ issue we have our slack channel called #help-devops. There we can address the users for their quries
+
+we will work on incidents and service requests(RITM's)aswell. Incidents are majorly for issue where as service requests are for access related
+
+depends upon the users request we can help in building the infrastructure with the help of terraform
+
+on a daily basis we will work on creating pipeline to make the process automatic for users
+
+We will work on ec2 VM's issues, VPC, subnets, load balancing and autoscaling in AWS 
+
+Apart from that, i can participate in knowledge transfer session aswell to the new joinees to meet the expections of  our cleint

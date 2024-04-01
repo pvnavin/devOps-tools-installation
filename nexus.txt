@@ -1,0 +1,42 @@
+nexus: instance type:t2 medium
+    1  yum install java-1.8.0* -y
+    2  cd /opt
+    3  wget https://download.sonatype.com/nexus/3/nexus-3.65.0-02-unix.tar.gz
+    4  ls
+    5  tar -xvf nexus-3.65.0-02-unix.tar.gz 
+    6  ls
+    7  mv nexus-3.65.0-02 nexus
+    8  ls
+    9  useradd nexus
+   10    visudo
+   11  ll
+   12  chown -R nexus:nexus nexus 
+   13  chown -R nexus:nexus sonatype-work/
+   14  chmod -R 775 nexus
+   15  chmod -R 775 sonatype-work/
+   16  ll
+   17  ls
+   18  cd nexus/
+   19  ls
+   20  cd bin/
+   21  ls
+   22  vi nexus.rc 
+   23  su - nexus 
+   24  ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
+   25  cd /etc/init.d/
+   26  ls
+   27  chkconfig --add nexus 
+   28  chkconfig nexus on
+   29  sudo service start nexus
+   30  su - nexus 
+   31  cd
+   32  cd /opt
+   33  history
+   34  cd bin
+   35  cd bin/
+   36  ls
+   37  cd nexus/
+   38  ls
+   39  cd bin/
+portrange:8081,
+/opt/sonatype-work/nexus3/admin.password

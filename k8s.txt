@@ -1,0 +1,26 @@
+ 1  apt-get update && apt-get install -y apt-transport-https
+    2  sudo apt -y install curl apt-transport-https
+    3  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    4  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    5  apt-get install docker.io -y
+    6   
+    7  apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+    8  kubeadm init
+    9  mkdir -p $HOME/.kube
+   10  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   11  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   12  kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+   13  kubectl get nodes
+   14  vi pod.yml
+   15  kubectl create -f pod.yml 
+   16  kubectl get pods
+   17  history\
+***node***
+  apt-get update && apt-get install -y apt-transport-https
+    2  sudo apt -y install curl apt-transport-https
+    3  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+    4  echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    5  apt-get install docker.io -y
+    6  sudo apt update
+    7  apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+    8  kubeadm join 172.31.22.145:6443 --token lm9ivd.6x5q8cloq8fwkzfv         --discovery-token-ca-cert-hash sha256:0d3253c6cc7fd7ca3dc5d2e1ef0a511a7989c942d5eb71d698602fe5746265b6

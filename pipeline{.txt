@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    tools{
+        maven "maven"
+        
+    }
+    stages{
+        stage('git checkout'){
+            steps{
+    git credentialsId: 'ok', url: 'https://github.com/pvnavin/docker-project.git'            
+            }
+        }
+        
+    }
+}
